@@ -5,10 +5,5 @@ from .models import Tree
 class TreeSerializer(serializers.ModelSerializer):
     class Meta:
         model = Tree
-        fields = [
-            'title', 'url', 'content', 'level', 'type', 'active', 'created_at', 'updated_at',
-        ]
-
-        extra_kwargs = {
-            "url": {"required": False},
-        }
+        fields = ('title', 'url', 'content', 'level', 'type', 'active', 
+                'created_at', 'updated_at')
